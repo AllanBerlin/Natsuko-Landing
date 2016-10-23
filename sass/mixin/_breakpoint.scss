@@ -1,0 +1,63 @@
+@function is-smallest-breakpoint($name) {
+    @return $name == tiny;
+}
+
+@function is-largest-breakpoint($name) {
+    @return $name == xlarge;
+}
+
+// get the minimum screen width, at which a breakpoint becomes active
+@function breakpoint-min-width($name) {
+    @if not map-has-key($breakpoints, $name) {
+        @warn "Unknown breakpoint: '#{$name}'.";
+        @return -1;
+    }
+
+    @return map-get($breakpoints, $name);
+}
+
+@mixin exclusive-breakpoint($name) {
+    @if not map-has-key($breakpoints, $name) {
+        @warn "Unknown breakpoint: '#{$name}'.";
+    }
+
+    $min: null;
+    $max: null;
+
+    @each $breakpoint, $breakpoint-min-width in $breakpoints {
+        @if $breakpoint == $name {
+            $min: $breakpoint-min-width;
+        } @else if ($min and not $max) {
+            $max: $breakpoint-min-width - 1;
+        }
+    }
+
+    @if is-smallest-breakpoint($name) {
+        // narrowest breakpoint, only max-width needed
+        @media only screen and (max-width: $max) {
+            @content;
+        }
+    } @else if is-largest-breakpoint($name) {
+        // widest breakpoint, only min-width needed
+        @media only screen and (min-width: $min) {
+            @content;
+        }
+    } @else {
+        // all other breakpoints have both a max-width and a min-width
+        @media only screen and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint($name) {
+    @if not map-has-key($breakpoints, $name) {
+        @warn "Unknown breakpoint: '#{$name}'.";
+    } @else if is-smallest-breakpoint($name) {
+        @content;
+    } @else {
+        @media only screen and (min-width: map-get($breakpoints, $name)) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.landing {
+    @include css3(background-size, cover);
+
+    min-height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: none;
+
+    .header,
+    .title,
+    .site-title {
+        @include accessible();
+    }
+
+    .content {
+        min-height: 100vh;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .container {
+        overflow: auto;
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .site {
+        min-height: 1px;
+        position: relative;
+        width: 100%;
+
+        @include breakpoint(small) {
+            @include clear();
+
+            float: left;
+            width: 50%;
+        }
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    .aiueo {
+        height: 50vh;
+        width: 100%;
+        background: $white;
+    }
+
+    .aiueo,
+    .lily-slider {
+        @include breakpoint(small) {
+            height: 99vh;
+        }
+    }
+
+    .top.centered {
+        bottom: 21vh;
+        width: 53%;
+
+        @include breakpoint(small) {
+            bottom: 42vh;
+        }
+    }
+
+    .centered {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        z-index: 10;
+        width: 35%;
+        bottom: 20vh;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+        @include breakpoint(small) {
+            bottom: 40vh;
+        }
+
+        &.aiueo-logo {
+            background: inline-image('aiueo_design_logo_black.svg') no-repeat center;
+            width: 100%;
+            top: 50%;
+            margin-top: -100px;
+            cursor: pointer;
+        }
+
+        &.liledeau-logo {
+            background: inline-image('liledeau_accessories_logo_white.svg') no-repeat center;
+            width: 100%;
+            top: 50%;
+            margin-top: -100px;
+            cursor: pointer;
+        }
+    }
+}

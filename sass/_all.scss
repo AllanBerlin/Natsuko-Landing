@@ -1,0 +1,21 @@
+// sass component imports
+@import "compass/css3";
+@import "compass/typography/text/ellipsis";
+@import "compass/utilities/general/clearfix";
+@import "susy";
+
+// project configuration
+@import "config/*";
+
+// own mixins
+@import "mixin/*";
+
+// actual styles
+@import "compass/reset";
+@import "elements/*";
+
+@import "components/layout/*";
+
+@import "components/screenIndicator";
+@import "components/icon";
+@import "components/slider";

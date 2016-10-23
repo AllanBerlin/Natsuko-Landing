@@ -1,0 +1,41 @@
+
+#{$all-text-inputs},
+textarea {
+    @include box-sizing(border-box);
+    @include box-shadow(none);
+    @include font(regular, m, light);
+    @include border-radius(0);
+
+    display: block;
+    width: 100%;
+    line-height: 24px;
+    padding: 10px;
+    background-color: $white;
+    border: 1px solid $light-grey;
+    color: $font-color;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    &:focus {
+        @include box-shadow(none);
+
+        border-color: $black;
+        outline: 0;
+    }
+
+    &[disabled] {
+        background: $quiet-color;
+        opacity: 0.3;
+    }
+
+    @include placeholder() {
+        color: $quiet-color;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}

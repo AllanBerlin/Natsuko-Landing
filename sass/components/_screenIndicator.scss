@@ -1,0 +1,33 @@
+.screenIndicator {
+    background: black;
+    bottom: 0;
+    border: solid black;
+    border-width: 1px 1px 0 0 ;
+    color: lime;
+    font-family: monospace;
+    opacity: 0.2;
+    padding: 2px 1ex;
+    position: fixed;
+    right: 0;
+    visibility: hidden;
+
+    .debugging & {
+        visibility: visible;
+    }
+
+    @each $name, $breakpoint in $breakpoints {
+        @include breakpoint($name) {
+            &:after {
+                content: "#{$name}";
+            }
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &:before {
+            content: "screen type: ";
+        }
+    }
+}

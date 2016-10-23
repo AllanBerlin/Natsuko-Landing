@@ -1,0 +1,11 @@
+// minimum screen widths at which
+// .           . tiny     . small  . medium        . large                 . xlarge
+// |-----------|----------|--------|---------------|-----------------------|--------------------------------->
+// 0          240        460      640             960                    1439
+$breakpoints: (
+    tiny: 240px,
+    small: 480px,
+    medium: 640px,
+    large: 960px,
+    xlarge: 1439px
+);

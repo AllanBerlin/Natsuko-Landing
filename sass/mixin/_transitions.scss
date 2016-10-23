@@ -1,0 +1,35 @@
+@mixin drop-down($active-class: active) {
+    @include transition((
+        opacity .4s ease,
+        // animating potential margins as the original use-case was for an in-flow
+        // element with little height and much margin
+        margin-top .3s ease,
+        margin-bottom .3s ease
+    ));
+
+    opacity: 0;
+    // need to remove the element from the flow but keep it displayed to be able to
+    // trigger a transition
+    position: absolute;
+    visibility: hidden;
+
+    &.#{$active-class} {
+        opacity: 1;
+        position: relative;
+        visibility: visible;
+    }
+
+    &:not(.#{$active-class}) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@mixin ease-color() {
+    @include transition((
+        color .2s ease,
+        background-color .2s ease,
+        border-color .2s ease,
+        outline-color .2s ease
+    ));
+}

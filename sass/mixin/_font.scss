@@ -1,0 +1,57 @@
+@function font-size($size: m) {
+    $sizes: map-get($font-sizes, $selected-set-of-font-sizes);
+
+    @if not map-has-key($sizes, $size) {
+        @error "Font size '#{$size}' is not defined!";
+
+        @return null;
+    }
+
+    @return map-get($sizes, $size);
+}
+
+@function font-family($family: regular) {
+    @if not map-has-key($font-families, $family) {
+        @error "Font family '#{$family}' is not defined!";
+
+        @return null;
+    }
+
+    @return map-get($font-families, $family);
+}
+
+@function font-weight($weight: light) {
+    $weights: map-get($font-weights, $selected-set-of-font-weights);
+
+    @if not map-has-key($weights, $weight) {
+        @error "Font weight '#{$weight}' is not defined!";
+
+        @return null;
+    }
+
+    @return map-get($weights, $weight);
+}
+
+@mixin font-size($size: m) {
+    @if type-of($size) == "string" {
+        $size: font-size($size);
+    }
+    font-size: $size;
+}
+
+@mixin font-weight($weight: light) {
+    @if type-of($weight) == "string" {
+        $weight: font-weight($weight);
+    }
+    font-weight: $weight;
+}
+
+@mixin font-family($family) {
+    font-family: font-family($family);
+}
+
+@mixin font($family, $size, $weight) {
+    @include font-family($family);
+    @include font-size($size);
+    @include font-weight($weight);
+}

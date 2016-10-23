@@ -1,0 +1,55 @@
+@mixin icon-src($path, $prefix: icon) {
+    $name: basename($path, '.*');
+
+    %#{$prefix}-#{$name}-src {
+        background: inline-image($path) center no-repeat transparent;
+    }
+}
+
+@mixin icon($name, $w: 15px, $h: 15px, $prefix: icon) {
+    @extend %base-icon-style;
+    @extend %#{$prefix}-#{$name}-src;
+
+    background-size: $w $h;
+    width: $w;
+    height: $h;
+}
+
+@mixin icon-dimension($size: normal) {
+    $pxSize: $size;
+
+    @if typeof($size) == "string" {
+        $pxSize: icon-dimension-value($size);
+    }
+
+    background-size: $pxSize $pxSize;
+    height: $pxSize;
+    line-height: $pxSize;
+    width: $pxSize;
+}
+
+@function icon-dimension-value($size: normal) {
+    $pxSize: 24px;
+    @if $size == small {
+        $pxSize: 15px;
+    }
+    @else if $size == normal {
+        $pxSize: 18px;
+    }
+    @else if $size == medium {
+        $pxSize: 32px;
+    }
+    @else if $size == big {
+        $pxSize: 40px;
+    } @else {
+        @warn "unknown size: #{$size}";
+    }
+    @return $pxSize;
+}
+
+@mixin icons-src($files, $prefix: icon) {
+    @each $file in $files {
+        @include icon-src($file, $prefix);
+    }
+}
+

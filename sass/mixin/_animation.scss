@@ -1,0 +1,29 @@
+@mixin animate($duration, $count) {
+    @include css3(animation-duration, $duration);
+    @include css3(animation-iteration-count, $count);
+}
+
+@mixin animation-name($animations) {
+    @each $animation in $animations {
+        @include css3(animation-name, $animation);
+    }
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin filter($filter-type, $filter-amount) {
+    @include css3(filter, $filter-type+unquote('(#{$filter-amount})'));
+}

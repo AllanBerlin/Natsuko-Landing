@@ -1,0 +1,39 @@
+$grey: #999999;
+$light-grey: #ebebeb;
+$lighter-grey: #f6f6f6;
+$main-bg-color: #f0f0f0;
+$grid-head-bg-color: #d0d0d0;
+$grid-thumbnail-bg-color: #d8d8d8;
+$black: #000000;
+$white: #ffffff;
+
+$red: #ff6400;
+$light-red: #ffefe5;
+
+$blue: #0000ff;
+$light-blue: #e5e5ff;
+$loader-blue: #aad5df;
+
+$yellow: #f9c62d;
+$light-yellow: #fef9ea;
+
+$magenta: #f0f;
+
+$modal-bg-color: rgba(0, 0, 0, 0.4);
+
+$font-color: $black;
+$quiet-color: $grey;
+$loud-color: $black;
+$header-color: $font-color;
+
+$link-state-colors: (
+    // no style for the actual :visited state
+    visited: inherit,
+    // mostly any link will be blue upon hovering
+    hover: $blue,
+    focus: $blue,
+    // if highlighted as the currently selected link of e.g. a navigation
+    current: $magenta,
+    // actual :active of links
+    active: $magenta
+);

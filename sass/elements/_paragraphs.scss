@@ -1,0 +1,16 @@
+p {
+    margin-bottom: 1em;
+}
+
+p > strong,
+p > b {
+    @include font-weight(bold);
+}
+
+p > i,
+p > em,
+// pasted from word/in bad shape
+p > span > i,
+p > span > em {
+    font-style: italic;
+}
