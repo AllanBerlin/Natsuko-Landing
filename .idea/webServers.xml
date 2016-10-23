@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bceead32-3513-478e-864f-f9f5d615dd39" name="natsuko-landing" url="http://natsukomizushima.com">
+        <fileTransfer host="natsukomizushima.com" port="21" password="dfccdfd8dfc3dfcfdfc4dfcedfc4dfc8dfc1dfdddf9fdfccdfd0" username="a4564263">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

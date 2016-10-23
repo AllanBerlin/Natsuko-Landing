@@ -1,0 +1,288 @@
+/*!
+ * Natsuko Template
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background: none;
+}
+
+.wrap {
+    min-height:100%;
+    max-height: 100vh;
+    position:relative;
+}
+
+.container {
+     /* Height of the footer element */
+}
+
+.footer {
+    line-height: 1.4;
+    position: absolute;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    text-align: center;
+    z-index: 9999;
+}
+
+.full {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.contact {
+    margin-left: 20px;
+    float: left;
+    display: inline-block;
+}
+
+.copyright {
+    margin-left: -20px;
+    display: block;
+}
+
+.contact, .copyright {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    padding: 9px 0;
+    line-height: 12px;
+}
+
+.link {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: inherit;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.site {
+    float: left;
+    min-height: 1px;
+    position: relative;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.aiueo {
+    height: 50vh;
+    width: 100%;
+    background: #ffffff;
+}
+
+.top.centered {
+    bottom: 21vh;
+    width: 53%;
+}
+
+.centered {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    z-index: 10;
+    width: 35%;
+    bottom: 20vh;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.lily-slider {
+    height: 50vh;
+    width: auto;
+    top: 0;
+    position: relative;
+}
+
+.lily-slider:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 1px;
+    width: 100%;
+}
+
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    filter: brightness(70%);
+}
+.slide1:hover,.slide2:hover,.slide3:hover,.slide4:hover,.slide5:hover {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -o-filter: none;
+    filter: none;
+}
+.slide1 {
+    background: url(../images/dots.jpg)no-repeat center;
+    background-size: cover;
+    animation:fade 30s infinite;
+    -webkit-animation:fade 30s infinite;
+
+}
+.slide2 {
+    background: url(../images/portrait.jpg)no-repeat center;
+    background-size: cover;
+    animation:fade2 30s infinite;
+    -webkit-animation:fade2 30s infinite;
+}
+.slide3 {
+    background: url(../images/acorn.jpg)no-repeat center;
+    background-size: cover;
+    animation:fade3 30s infinite;
+    -webkit-animation:fade3 30s infinite;
+}
+.slide4 {
+    background: url(../images/necklaces.jpg)no-repeat center;
+    background-size: cover;
+    animation:fade4 30s infinite;
+    -webkit-animation:fade4 30s infinite;
+}
+.slide5 {
+    background: url(../images/wood.jpg)no-repeat center;
+    background-size: cover;
+    animation:fade5 30s infinite;
+    -webkit-animation:fade5 30s infinite;
+}
+@keyframes fade
+{
+    0%   {opacity:1}
+    20% { opacity: 0}
+    40% { opacity: 0}
+    60% { opacity: 0}
+    80% { opacity: 0}
+    100% { opacity: 1}
+}
+@keyframes fade2
+{
+    0%   {opacity:0}
+    20% { opacity: 1}
+    40% { opacity: 0}
+    60% { opacity: 0}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+@keyframes fade3
+{
+    0%   {opacity:0}
+    20% { opacity: 0}
+    40% { opacity: 1}
+    60% { opacity: 0}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+@keyframes fade4
+{
+    0%   {opacity:0}
+    20% { opacity: 0}
+    40% { opacity: 0}
+    60% { opacity: 1}
+    80% { opacity: 0}
+    100% { opacity: 0}
+}
+@keyframes fade5
+{
+    0%   {opacity:0}
+    20% { opacity: 0}
+    40% { opacity: 0}
+    60% { opacity: 0}
+    80% { opacity: 1}
+    100% { opacity: 0}
+}
+
+/* Define mobile styles */
+@media only screen and (max-width: 480px){
+    .site {
+        width: 100%;
+    }
+}
+
+/* min-width 480px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (min-width: 480px) {
+    .site {
+        width: 50%;
+    }
+
+    .container {
+        padding-bottom: 0;
+    }
+
+    .aiueo, .lily-slider {
+        height: 99vh;
+    }
+
+    .top.centered {
+        bottom: 42vh;
+    }
+
+    .centered {
+        bottom: 40vh;
+    }
+
+    .footer {
+        height: 30px;
+    }
+
+    .copyright {
+        display: inline-block;
+    }
+}
+
+/* min-width 768px, medium screens */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* min-width 769px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 1025px) {
+
+}
+
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+}
+
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 1441px) {
+
+}
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+/* min-width 1921px, xxlarge screens */
+@media only screen and (min-width: 1921px) {
+
+}
