@@ -1,0 +1,54 @@
+!!!
+%html.landing{:lang => "en"}
+	%head
+		%meta{:charset => "UTF-8"}/
+		%meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+		%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+		%meta{:content => "Natsuko Mizushima. She was born in Japan and works as designer in Berlin.", :name => "description"}/
+		%meta{:content => "Natsuko Mizushima", :name => "author"}/
+		%meta{:content => "Natsuko Mizushima, Natsuko Mizushima van der Ree, Natsuko van der Ree, Aiueo, Aiueo Berlin, l’île d’eau, liledeau, Accessories, Design, Upcycling Design, Graphic Design, Berlin, Japan", :name => "keywords"}/
+		%title Natsuko Mizushima
+		/ Custom CSS
+		%link{:as => "style", :href => "build/natsuko.css", :onload => "this.rel='stylesheet'", :rel => "preload"}/
+	%body
+		%noscript
+			%link{:href => "build/natsuko.css", :rel => "stylesheet"}/
+			/ Google Fonts Quicksand
+			%link{:href => "https://fonts.googleapis.com/css?family=Quicksand:400,700", :rel => "stylesheet"}/
+		%script{:type => "text/javascript"} jQuery(document).ready(function ($) {$(window).load(function () {$('#preloader').hide();});});
+		#preloader.preloader{:style => "position:fixed;left:0;top:0;z-index:999;width:100%;height:100%;overflow:visible;background-color:#ffffff;background-image:url('images/loader.gif');background-repeat:no-repeat;background-position:center center;background-attachment:scroll;"}
+		%header.header
+			%h1.title
+				Natsuko Mizushima
+		/ page content
+		%main.content
+			/ container
+			.container.wrapper
+				/ row
+				.row
+					%section.site.no-padding
+						%h2.site-title Aiueo
+						%a.link{:href => "http://aiueo-design.com", :title => "aiueo"}
+							.aiueo
+							.centered.aiueo-logo
+					%section.site.no-padding
+						%a.link{:href => "http://www.liledeau.net", :title => "liledeau"}
+							%h2.site-title Lile D'eau
+							.lily-slider
+								.slide.first
+								.slide.second
+								.slide.third
+								.slide.fourth
+								.slide.fifth
+							.top.centered.liledeau-logo
+		/ /.row
+		/ /.container
+		/ /.page content
+		/ footer
+		%footer.footer
+			%span.contact
+				%a.link{:href => "mailto:mail@natsukomizushima.com?subject=Hello%20Natsuko"} Contact
+			%span.copyright © 2010-2016 by Natsuko Mizushima. All rights reserved.
+		/ /.footer
+		/ jQuery
+		%script{:src => "js/jquery.js", :type => "text/javascript"}
