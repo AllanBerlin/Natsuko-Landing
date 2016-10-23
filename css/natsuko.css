@@ -1,288 +1,74 @@
-/*!
- * Natsuko Template
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
+/*
+Error: File to import not found or unreadable: compass/css3.
+        on line 2 of _all.scss
+        from line 7 of natsuko.scss
 
-html,
-body {
-    margin:0;
-    padding:0;
-    height:100%;
-    background: none;
-}
+1: $selected-set-of-font-sizes: "natsuko";
+2: $selected-set-of-font-weights: "natsuko";
+3: $default-font-size: m;
+4: $default-font-weight: light;
+5: $cms-content-font-size: l;
+6: 
+7: @import "all";
 
-.wrap {
-    min-height:100%;
-    max-height: 100vh;
-    position:relative;
-}
-
-.container {
-     /* Height of the footer element */
-}
-
-.footer {
-    line-height: 1.4;
-    position: absolute;
-    bottom:0;
-    left:0;
-    width: 100%;
-    height: 40px;
-    background: #000000;
-    text-align: center;
-    z-index: 9999;
-}
-
-.full {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    overflow-x: hidden;
-}
-
-.contact {
-    margin-left: 20px;
-    float: left;
-    display: inline-block;
-}
-
-.copyright {
-    margin-left: -20px;
-    display: block;
-}
-
-.contact, .copyright {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 10px;
-    color: #ffffff;
-    padding: 9px 0;
-    line-height: 12px;
-}
-
-.link {
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.link:hover {
-    color: inherit;
-}
-
-.wrapper {
-    width: 100%;
-}
-
-.site {
-    float: left;
-    min-height: 1px;
-    position: relative;
-}
-
-.no-padding {
-    padding: 0;
-}
-
-.aiueo {
-    height: 50vh;
-    width: 100%;
-    background: #ffffff;
-}
-
-.top.centered {
-    bottom: 21vh;
-    width: 53%;
-}
-
-.centered {
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    z-index: 10;
-    width: 35%;
-    bottom: 20vh;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.lily-slider {
-    height: 50vh;
-    width: auto;
-    top: 0;
-    position: relative;
-}
-
-.lily-slider:after {
-    content: "";
-    display: block;
-    visibility: hidden;
-    clear: both;
-    height: 1px;
-    width: 100%;
-}
-
-.slide1,.slide2,.slide3,.slide4,.slide5 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-filter: brightness(70%);
-    -moz-filter: brightness(70%);
-    -o-filter: brightness(70%);
-    filter: brightness(70%);
-}
-.slide1:hover,.slide2:hover,.slide3:hover,.slide4:hover,.slide5:hover {
-    -webkit-filter: none;
-    -moz-filter: none;
-    -o-filter: none;
-    filter: none;
-}
-.slide1 {
-    background: url(../images/dots.jpg)no-repeat center;
-    background-size: cover;
-    animation:fade 30s infinite;
-    -webkit-animation:fade 30s infinite;
-
-}
-.slide2 {
-    background: url(../images/portrait.jpg)no-repeat center;
-    background-size: cover;
-    animation:fade2 30s infinite;
-    -webkit-animation:fade2 30s infinite;
-}
-.slide3 {
-    background: url(../images/acorn.jpg)no-repeat center;
-    background-size: cover;
-    animation:fade3 30s infinite;
-    -webkit-animation:fade3 30s infinite;
-}
-.slide4 {
-    background: url(../images/necklaces.jpg)no-repeat center;
-    background-size: cover;
-    animation:fade4 30s infinite;
-    -webkit-animation:fade4 30s infinite;
-}
-.slide5 {
-    background: url(../images/wood.jpg)no-repeat center;
-    background-size: cover;
-    animation:fade5 30s infinite;
-    -webkit-animation:fade5 30s infinite;
-}
-@keyframes fade
-{
-    0%   {opacity:1}
-    20% { opacity: 0}
-    40% { opacity: 0}
-    60% { opacity: 0}
-    80% { opacity: 0}
-    100% { opacity: 1}
-}
-@keyframes fade2
-{
-    0%   {opacity:0}
-    20% { opacity: 1}
-    40% { opacity: 0}
-    60% { opacity: 0}
-    80% { opacity: 0}
-    100% { opacity: 0}
-}
-@keyframes fade3
-{
-    0%   {opacity:0}
-    20% { opacity: 0}
-    40% { opacity: 1}
-    60% { opacity: 0}
-    80% { opacity: 0}
-    100% { opacity: 0}
-}
-@keyframes fade4
-{
-    0%   {opacity:0}
-    20% { opacity: 0}
-    40% { opacity: 0}
-    60% { opacity: 1}
-    80% { opacity: 0}
-    100% { opacity: 0}
-}
-@keyframes fade5
-{
-    0%   {opacity:0}
-    20% { opacity: 0}
-    40% { opacity: 0}
-    60% { opacity: 0}
-    80% { opacity: 1}
-    100% { opacity: 0}
-}
-
-/* Define mobile styles */
-@media only screen and (max-width: 480px){
-    .site {
-        width: 100%;
-    }
-}
-
-/* min-width 480px, mobile-only styles, use when QAing mobile issues */
-@media only screen and (min-width: 480px) {
-    .site {
-        width: 50%;
-    }
-
-    .container {
-        padding-bottom: 0;
-    }
-
-    .aiueo, .lily-slider {
-        height: 99vh;
-    }
-
-    .top.centered {
-        bottom: 42vh;
-    }
-
-    .centered {
-        bottom: 40vh;
-    }
-
-    .footer {
-        height: 30px;
-    }
-
-    .copyright {
-        display: inline-block;
-    }
-}
-
-/* min-width 768px, medium screens */
-@media only screen and (min-width: 768px) {
-
-}
-
-/* min-width 769px and max-width 1024px, use when QAing tablet-only issues */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-}
-
-/* min-width 1025px, large screens */
-@media only screen and (min-width: 1025px) {
-
-}
-
-/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-
-}
-
-/* min-width 1441px, xlarge screens */
-@media only screen and (min-width: 1441px) {
-
-}
-
-/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-@media only screen and (min-width: 1441px) and (max-width: 1920px) {
-
-}
-
-/* min-width 1921px, xxlarge screens */
-@media only screen and (min-width: 1921px) {
-
-}
+Backtrace:
+_all.scss:2
+natsuko.scss:7
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/import_node.rb:45:in `import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `map'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:363:in `watch_or_update'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/Users/admin/.rvm/gems/ruby-2.2.2/gems/sass-3.4.21/bin/scss:13:in `<top (required)>'
+/Users/admin/.rvm/gems/ruby-2.2.2/bin/scss:23:in `load'
+/Users/admin/.rvm/gems/ruby-2.2.2/bin/scss:23:in `<main>'
+/Users/admin/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `eval'
+/Users/admin/.rvm/gems/ruby-2.2.2/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: compass/css3.\A         on line 2 of _all.scss\A         from line 7 of natsuko.scss\A \A 1: $selected-set-of-font-sizes: \"natsuko\";\A 2: $selected-set-of-font-weights: \"natsuko\";\A 3: $default-font-size: m;\A 4: $default-font-weight: light;\A 5: $cms-content-font-size: l;\A 6: \A 7: @import \"all\";"; }
