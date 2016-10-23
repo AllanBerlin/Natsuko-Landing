@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c243c79f-9a92-4850-bb96-c17386f2bc43" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Natsuko-Landing" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/natsuko.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.codekit" afterPath="$PROJECT_DIR$/config.codekit" />
     </list>
     <ignored path="natsuko-landing.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +38,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07772021">
+            <state vertical-scroll-proportion="0.8549223">
               <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
               <folding />
             </state>
@@ -479,7 +479,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07772021">
+        <state vertical-scroll-proportion="0.8549223">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding />
         </state>
