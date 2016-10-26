@@ -18,13 +18,14 @@
 <IfModule mod_headers.c>
 Header set Connection keep-alive
 <FilesMatch "\.(bmp|css|flv|gif|ico|jpg|jpeg|js|pdf|png|svg|swf|tif|tiff)$">
-    Header set Last-Modified "Mon, 22 Oct 2016 16:00:00 GMT"
+Header set Last-Modified "Mon, 26 Oct 2016 02:00:00 GMT"
 </FilesMatch>
 <FilesMatch "\\.(css)$">
 Header set Cache-Control "max-age=2692000, public"
 </FilesMatch>
 <FilesMatch "\\.(js)$">
 Header set Cache-Control "max-age=2692000, private"
+Header set Content-Encoding gzip
 </FilesMatch>
 <FilesMatch "\\.(x?html?|php)$">
 Header set Cache-Control "max-age=600, private, must-revalidate"
@@ -57,15 +58,3 @@ AddType image/svg+xml .svg
   AddEncoding gzip svgz
   AddEncoding gzip .svg
 </IfModule>
-
-<filesMatch "\.(js|css)$">
-Header set Content-Encoding x-deflate
-# Header set Content-Encoding compress
-# Header set Content-Encoding x-gzip
-</filesMatch>
-
-# BEGIN GZIP
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE image/svg+xml text/text text/html text/plain text/xml text/css text/x-javascript text/javascript application/x-javascript application/javascript
-</IfModule>
-# END GZIP
